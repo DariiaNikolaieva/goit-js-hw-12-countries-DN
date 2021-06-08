@@ -35,7 +35,7 @@ function onInputSearch(evt) {
 
 function renderCountryCard(country) {
   if (country.status === 404) {
-    onFetchError(country.message);
+    onFetchError(error);
   }
 
   if (country.length > 10) {
@@ -57,6 +57,6 @@ function renderCountryCard(country) {
 
 function onFetchError(error) {
   PNotify.error({
-    text: `${error}! Sorry, this country doesn't exists in the database`,
+    text: `Sorry, this country doesn't exists in the database`,
   });
 }
