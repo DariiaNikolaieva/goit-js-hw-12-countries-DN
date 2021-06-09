@@ -26,9 +26,7 @@ function onInputSearch(evt) {
 
   //   console.log(searchQuery);
 
-  if (!searchQuery) {
-    return;
-  }
+
 
   API.fetchCountry(searchQuery).then(renderCountryCard).catch(onFetchError);
 }
